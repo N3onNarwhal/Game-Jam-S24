@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float JumpPower = 5f;
     [SerializeField] float SkatingSpeed = 20f;
     [SerializeField] float WalkingSpeed = 7.5f;
+    [SerializeField] Transform CamPivot;
 
     bool isGrounded;
     bool isJumping;
@@ -15,6 +16,7 @@ public class PlayerController : MonoBehaviour
 
     float currentSpeed;
     float gravity = -9.8f;
+    float xRot;
 
     Vector3 velocity;
     Vector3 move;
@@ -64,6 +66,14 @@ public class PlayerController : MonoBehaviour
         }
         
         cc.Move(move * currentSpeed * Time.deltaTime);
+
+        // Cam Rotation
+        transform.Rotate(0, 1.75f*Input.GetAxis("Mouse X"), 0);
+
+        // X Rotation of Camera
+        xRot -= 0.5f*Input.GetAxis("Mouse Y");
+        xRot = Mathf.Clamp(xRot, 2f, 30f);
+        CamPivot.eulerAngles = new Vector3(xRot, transform.eulerAngles.y, 0);
     }
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
