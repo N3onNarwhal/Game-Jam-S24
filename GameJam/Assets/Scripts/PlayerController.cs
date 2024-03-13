@@ -28,7 +28,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        // Apply gravity
+        if (!PauseMenu.isPaused) {
+            // Apply gravity
         if (!isGrounded)
         {
             if (isJumping)
@@ -74,6 +75,9 @@ public class PlayerController : MonoBehaviour
         xRot -= 0.5f*Input.GetAxis("Mouse Y");
         xRot = Mathf.Clamp(xRot, 2f, 30f);
         CamPivot.eulerAngles = new Vector3(xRot, transform.eulerAngles.y, 0);
+
+        }
+        
     }
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
