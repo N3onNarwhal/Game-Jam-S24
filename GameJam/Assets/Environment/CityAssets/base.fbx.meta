@@ -3,7 +3,12 @@ guid: 9ef3f6c125897a54f969e0e9f22f5781
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: citybits_texture
+    second: {fileID: 2100000, guid: 13ac08ce5b0280d4cafa1b3a3e3d82fc, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
