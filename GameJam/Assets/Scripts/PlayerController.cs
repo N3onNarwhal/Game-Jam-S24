@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         if (!PauseMenu.isPaused) {
-            // Apply gravity
+        // Apply gravity
         if (!isGrounded)
         {
             if (isJumping)
