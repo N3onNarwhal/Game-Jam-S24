@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        
+        currentSpeed = WalkingSpeed;
     }
 
     void Update()
@@ -59,12 +59,9 @@ public class PlayerController : MonoBehaviour
         isSkating = Input.GetKey(KeyCode.LeftShift);
         if (isSkating)
         {
-            currentSpeed = SkatingSpeed;
+            StartCoroutine(Skating());
         }
-        else
-        {
-            currentSpeed = WalkingSpeed;
-        }
+        
         
         cc.Move(move * currentSpeed * Time.deltaTime);
 
@@ -85,6 +82,18 @@ public class PlayerController : MonoBehaviour
         if(hit.transform.CompareTag("Ground") && !isGrounded)
         {
             isGrounded = true;
+        }
+    }
+    
+    private IEnumerator Skating()
+    {
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            currentSpeed = SkatingSpeed;        //goes fast
+
+            yield return new WaitForSeconds(2); //AVERY THIS IS THE VALUE YOU CHANGE (the 2)
+
+            currentSpeed = WalkingSpeed;        //goes slow
         }
     }
 }
