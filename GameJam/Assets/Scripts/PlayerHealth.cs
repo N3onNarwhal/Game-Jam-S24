@@ -38,7 +38,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            TakeDamage(_damageToTake);
+            TakeDmg(_damageToTake);
         }
 
         if (_currentHealth == 0)
@@ -74,7 +74,7 @@ public class PlayerHealth : MonoBehaviour
         StartCoroutine(RegenStamina());
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDmg(int damage)
     {
         _currentHealth -= damage;
 
@@ -113,5 +113,22 @@ public class PlayerHealth : MonoBehaviour
         //make the mouse cursor visible
         Cursor.visible = true;
         */
+    }
+
+    // health/damage
+    public int attack;
+
+    public void TakeDamage(int amount)
+    {
+        TakeDmg(amount);
+    }
+
+    public void DealDamage(GameObject Enemy)
+    {
+        var enemyAtt = Enemy.GetComponent<EnemyAttributes>();
+        if (enemyAtt != null)
+        {
+            enemyAtt.TakeDamage(attack);
+        }
     }
 }

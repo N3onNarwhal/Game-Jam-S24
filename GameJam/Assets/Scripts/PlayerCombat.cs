@@ -10,14 +10,17 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] GameObject skateAnim;
 
     Animator attack;
+    [SerializeField] GameObject attackArea;
 
-    //AnimatorStateInfo animStateInfo;
     bool animFinished = true;
-    public float NTime = 0.0f;
+    float NTime = 0.0f;
+    float animTimer;
 
     void Start()
     {
        attack = attackAnim.GetComponent<Animator>();
+       attackArea.SetActive(false);
+       animTimer = attack.GetCurrentAnimatorStateInfo(0).length;
     }
 
     // Update is called once per frame
@@ -27,16 +30,19 @@ public class PlayerCombat : MonoBehaviour
         {
             if (NTime == 0.0f)
             {
+                Attack();
                 animFinished = false;
                 attackAnim.SetActive(true);
                 idleAnim.SetActive(false);
                 runAnim.SetActive(false);
                 skateAnim.SetActive(false);
+                
             }
         }
         if (animFinished)
         {
             attackAnim.SetActive(false);
+            attackArea.SetActive(false);
         }
 
         NTime = attack.GetCurrentAnimatorStateInfo(0).normalizedTime;
@@ -46,9 +52,13 @@ public class PlayerCombat : MonoBehaviour
             NTime = 0.0f;
             animFinished = true;
             attackAnim.SetActive(false);
+            attackArea.SetActive(false);
             idleAnim.SetActive(true);
-            runAnim.SetActive(true);
-            skateAnim.SetActive(true);
         }
+    }
+
+    void Attack()
+    {
+        attackArea.SetActive(true);
     }
 }

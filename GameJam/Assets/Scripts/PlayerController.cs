@@ -34,6 +34,7 @@ public class PlayerController : MonoBehaviour
     }
     void Awake()
     {
+        attackAnim.SetActive(false);
         idleAnim.SetActive(true);
         runAnim.SetActive(false);
         skateAnim.SetActive(false);
