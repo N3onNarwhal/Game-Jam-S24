@@ -10,8 +10,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float WalkingSpeed = 7.5f;
     [SerializeField] Transform CamPivot;
 
+    [SerializeField] GameObject attackAnim;
     [SerializeField] GameObject idleAnim;
     [SerializeField] GameObject runAnim;
+    [SerializeField] GameObject skateAnim;
 
     bool isGrounded;
     bool isJumping;
@@ -34,6 +36,7 @@ public class PlayerController : MonoBehaviour
     {
         idleAnim.SetActive(true);
         runAnim.SetActive(false);
+        skateAnim.SetActive(false);
     }
 
     void Update()
@@ -49,19 +52,32 @@ public class PlayerController : MonoBehaviour
             isMoving = true;
         }
 
-        if (isMoving)
+        if (attackAnim.active)
+        {
+            idleAnim.SetActive(false);
+            runAnim.SetActive(false);    // make sure other animations don't play during attack
+            skateAnim.SetActive(false);
+        }
+        else if (isMoving)   // if moving
         {
             if (!isSkating)
             {
-                runAnim.SetActive(true);
                 idleAnim.SetActive(false);
+                runAnim.SetActive(true);    // run anim active
+                skateAnim.SetActive(false);
             }
-            // TODO: add skating anim
+            else
+            {
+                idleAnim.SetActive(false);
+                runAnim.SetActive(false);
+                skateAnim.SetActive(true);  // skating anim active
+            }
         }
-        else
+        else    // if not moving
         {
-            idleAnim.SetActive(true);
+            idleAnim.SetActive(true);   // idle anim active
             runAnim.SetActive(false);
+            skateAnim.SetActive(false);
         }
 
         // Apply gravity
