@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyAnimation : MonoBehaviour
 {
+    public GameObject officer;
     public GameObject officerRig;
     Animator officerAnim;
     bool moving;
@@ -13,19 +14,15 @@ public class EnemyAnimation : MonoBehaviour
     {
         officerAnim = officerRig.GetComponent<Animator>();
         officerAnim.SetBool("isMoving", false);
-        rb = officerRig.GetComponent<Rigidbody>();
+        rb = officer.GetComponent<Rigidbody>();
     }
 
     void Update()
     {
-        if (officerAnim == null)
-        {
-            Debug.Log("Animator is null");
-        }
-
-        if (rb.velocity != Vector3.zero)
+        if (rb.velocity != Vector3.zero || transform.hasChanged)
         {
             moving = true;
+            transform.hasChanged = false;
         }
         else
         {
