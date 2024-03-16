@@ -13,7 +13,7 @@ public class EnemyAttackArea : MonoBehaviour
         {
             Debug.Log("Player hit");
             PlayerHealth Jax = other.GetComponent<PlayerHealth>();
-            Officer.DealDamage(Jax.gameObject);
+            Jax.TakeDamage(damage);
         }
     }
 }
