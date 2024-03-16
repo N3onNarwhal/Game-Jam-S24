@@ -1,14 +1,9 @@
 fileFormatVersion: 2
-guid: 25386c66bbb393e4099764a3089e208c
+guid: c7c41fc7b1444184da0ac16b5791529c
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: OfficerTex
-    second: {fileID: 2100000, guid: bdd1902d8c6ba674c9c9730c7146b901, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
