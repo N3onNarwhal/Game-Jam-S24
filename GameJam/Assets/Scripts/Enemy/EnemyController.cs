@@ -5,19 +5,27 @@ using UnityEngine.AI;
 
 public class EnemyController : MonoBehaviour
 {
-    public float lookRadius;
+    [SerializeField] GameObject eAttackArea;
 
-    Transform target;
+    public float lookRadius;
+    public GameObject officerRig;
+
+    Animator officerAnim;
     NavMeshAgent agent;
+    Transform target;
+
+    float NTime = 0.0f;
 
     void Start()
     {
         target = PlayerManager.instance.player.transform;
+        eAttackArea.SetActive(false);
     }
 
     void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
+        officerAnim = officerRig.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -30,10 +38,27 @@ public class EnemyController : MonoBehaviour
 
             if (distance <= agent.stoppingDistance)
             {
-                // attack the target
+                if (NTime == 0.0f)
+                {
+                    officerAnim.SetBool("isAttacking", true);
+                    Debug.Log("isAttacking true");
+                    Attack();
+                }
+                else if (NTime == 1.0f)
+                {
+                    officerAnim.SetBool("isAttacking", false);
+                    NTime = 0.0f;
+                    eAttackArea.SetActive(false);
+                    Debug.Log("isAttacking false");
+                }
                 FaceTarget();
             }
         }
+    }
+
+    void Attack()
+    {
+        eAttackArea.SetActive(true);
     }
 
     void FaceTarget ()
