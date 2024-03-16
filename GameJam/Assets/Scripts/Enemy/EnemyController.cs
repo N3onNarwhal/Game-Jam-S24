@@ -38,28 +38,12 @@ public class EnemyController : MonoBehaviour
 
             if (distance <= agent.stoppingDistance)
             {
-                if (NTime == 0.0f)
-                {
-                    officerAnim.SetBool("isAttacking", true);
-                    Debug.Log("isAttacking true");
-                    Attack();
-                }
-                else if (NTime == 1.0f)
-                {
-                    officerAnim.SetBool("isAttacking", false);
-                    NTime = 0.0f;
-                    eAttackArea.SetActive(false);
-                    Debug.Log("isAttacking false");
-                }
+                // TODO: set up attack
                 FaceTarget();
             }
         }
     }
 
-    void Attack()
-    {
-        eAttackArea.SetActive(true);
-    }
 
     void FaceTarget ()
     {
