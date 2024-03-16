@@ -12,11 +12,13 @@ public class PlayerController : MonoBehaviour
 
     bool isGrounded;
     bool isJumping;
+    bool isMoving;
     bool isSkating;
 
     float currentSpeed;
     float gravity = -9.8f;
     float xRot;
+
 
     Vector3 velocity;
     Vector3 move;
@@ -29,6 +31,16 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         if (!PauseMenu.isPaused) {
+
+        if (cc.velocity.x == 0 && cc.velocity.y == 0 && cc.velocity.z == 0)
+        {
+            isMoving = false;
+        }
+        else 
+        {
+            isMoving = true;
+        }
+
         // Apply gravity
         if (!isGrounded)
         {
@@ -70,7 +82,7 @@ public class PlayerController : MonoBehaviour
 
         // X Rotation of Camera
         xRot -= 0.5f*Input.GetAxis("Mouse Y");
-        xRot = Mathf.Clamp(xRot, 2f, 30f);
+        xRot = Mathf.Clamp(xRot, 8f, 28f);
         CamPivot.eulerAngles = new Vector3(xRot, transform.eulerAngles.y, 0);
 
         }
