@@ -10,6 +10,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float WalkingSpeed = 7.5f;
     [SerializeField] Transform CamPivot;
 
+    [SerializeField] GameObject idleAnim;
+    [SerializeField] GameObject runAnim;
+
     bool isGrounded;
     bool isJumping;
     bool isMoving;
@@ -27,6 +30,11 @@ public class PlayerController : MonoBehaviour
     {
         currentSpeed = WalkingSpeed;
     }
+    void Awake()
+    {
+        idleAnim.SetActive(true);
+        runAnim.SetActive(false);
+    }
 
     void Update()
     {
@@ -39,6 +47,21 @@ public class PlayerController : MonoBehaviour
         else 
         {
             isMoving = true;
+        }
+
+        if (isMoving)
+        {
+            if (!isSkating)
+            {
+                runAnim.SetActive(true);
+                idleAnim.SetActive(false);
+            }
+            // TODO: add skating anim
+        }
+        else
+        {
+            idleAnim.SetActive(true);
+            runAnim.SetActive(false);
         }
 
         // Apply gravity
