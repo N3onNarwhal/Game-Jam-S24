@@ -16,7 +16,7 @@ public class EnemyController : MonoBehaviour
     void Start()
     {
         target = PlayerManager.instance.player.transform;
-        eAttackArea.SetActive(false);
+        //eAttackArea.SetActive(false);
     }
 
     void Awake()
@@ -34,7 +34,6 @@ public class EnemyController : MonoBehaviour
 
             if (distance <= agent.stoppingDistance)
             {
-                eAttackArea.SetActive(true);
                 Attack();
                 FaceTarget();
             }
@@ -52,6 +51,5 @@ public class EnemyController : MonoBehaviour
     private IEnumerator Attack()
     {
         yield return new WaitForSeconds(1);
-        eAttackArea.SetActive(true);
     }
 }

@@ -150,4 +150,30 @@ public class PlayerController : MonoBehaviour
             currentSpeed = WalkingSpeed;        //goes slow
         }
     }
+    
+    // void OnCollisionEnter(Collision other)
+    // {
+    //     Debug.Log("OnCollisioniEnter");
+    //     GameObject enem = other.gameObject;
+    //     if (enem.tag == "EnemyAttackArea" || enem.tag == "Enemy")
+    //     {
+    //         Debug.Log("Enemy tag");
+    //         GetComponent<PlayerHealth>().TakeDamage(20);
+    //     }
+    // }
+    // void OnCollisionExit(Collision other)
+    // {
+    //     Debug.Log("collision exit");
+    // }
+
+    void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("OnTriggerEnter");
+        GameObject enem = other.gameObject;
+        if (enem.tag == "Enemy")
+        {
+            Debug.Log("Enemy tag");
+            GetComponent<PlayerHealth>().TakeDamage(20);
+        }
+    }
 }
