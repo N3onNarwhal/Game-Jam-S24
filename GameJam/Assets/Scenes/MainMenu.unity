@@ -753,7 +753,7 @@ GameObject:
   - component: {fileID: 1089407884}
   - component: {fileID: 1089407883}
   m_Layer: 5
-  m_Name: Rules the World!
+  m_Name: Attacks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -798,7 +798,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Rules the World!
+  m_text: attacks
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 30ec284fe62c5d646a92df1c3a314710, type: 2}
   m_sharedMaterial: {fileID: 6677847153400728866, guid: 30ec284fe62c5d646a92df1c3a314710, type: 2}
@@ -825,8 +825,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 80
-  m_fontSizeBase: 80
+  m_fontSize: 85
+  m_fontSizeBase: 85
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -835,7 +835,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: 75
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
