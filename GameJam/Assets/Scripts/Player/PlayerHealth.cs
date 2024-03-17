@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] int _maxHealth = 100;
-    [SerializeField] GameObject _deathPanel = null;
-    [SerializeField] AudioSource _playerDeath = null;
+    //[SerializeField] GameObject _deathPanel = null;
+    //[SerializeField] AudioSource _playerDeath = null;
     [SerializeField] AudioSource _playerHurt = null;
     [SerializeField] AudioSource _playerDrink = null;
     [SerializeField] int _maxStamina = 100;

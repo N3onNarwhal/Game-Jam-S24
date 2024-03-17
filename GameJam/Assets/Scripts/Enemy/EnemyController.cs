@@ -6,15 +6,12 @@ using UnityEngine.AI;
 public class EnemyController : MonoBehaviour
 {
     [SerializeField] GameObject eAttackArea;
+    [SerializeField] GameObject Officer;
 
     public float lookRadius;
-    public GameObject officerRig;
 
-    Animator officerAnim;
     NavMeshAgent agent;
     Transform target;
-
-    float NTime = 0.0f;
 
     void Start()
     {
@@ -25,7 +22,6 @@ public class EnemyController : MonoBehaviour
     void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
-        officerAnim = officerRig.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -38,29 +34,12 @@ public class EnemyController : MonoBehaviour
 
             if (distance <= agent.stoppingDistance)
             {
+                eAttackArea.SetActive(true);
                 Attack();
                 FaceTarget();
             }
         }
-
-        NTime = officerAnim.GetCurrentAnimatorStateInfo(0).normalizedTime;
-        if (NTime == 0.0f)
-        {
-            eAttackArea.SetActive(true);
-        }
-        else if (NTime >= 1.0f)
-        {
-            eAttackArea.SetActive(false);
-        }
-    }
-
-    void Attack()
-    {
-        if (!officerAnim.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
-        {
-            officerAnim.SetTrigger("Attack");
-            agent.SetDestination(transform.position);
-        }
+        
     }
 
     void FaceTarget ()
@@ -68,5 +47,11 @@ public class EnemyController : MonoBehaviour
         Vector3 direction = (target.position - transform.position).normalized;
 		Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
 		transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
+    }
+
+    private IEnumerator Attack()
+    {
+        yield return new WaitForSeconds(1);
+        eAttackArea.SetActive(true);
     }
 }

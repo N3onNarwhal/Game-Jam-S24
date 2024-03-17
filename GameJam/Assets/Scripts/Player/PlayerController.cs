@@ -24,7 +24,6 @@ public class PlayerController : MonoBehaviour
     float gravity = -9.8f;
     float xRot;
 
-
     Vector3 velocity;
     Vector3 move;
 
@@ -53,7 +52,7 @@ public class PlayerController : MonoBehaviour
             isMoving = true;
         }
 
-        if (attackAnim.active)
+        if (attackAnim.activeInHierarchy)
         {
             idleAnim.SetActive(false);
             runAnim.SetActive(false);    // make sure other animations don't play during attack
@@ -82,6 +81,10 @@ public class PlayerController : MonoBehaviour
         }
 
         // Apply gravity
+        if (cc.gameObject.tag != "Ground")
+        {
+            isGrounded = false;
+        }
         if (!isGrounded)
         {
             if (isJumping)
@@ -113,7 +116,6 @@ public class PlayerController : MonoBehaviour
         {
             StartCoroutine(Skating());
         }
-        
         
         cc.Move(move * currentSpeed * Time.deltaTime);
 

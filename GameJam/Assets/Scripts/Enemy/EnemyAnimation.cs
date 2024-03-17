@@ -19,15 +19,16 @@ public class EnemyAnimation : MonoBehaviour
 
     void Update()
     {
-        if (rb.velocity != Vector3.zero || transform.hasChanged)
+        if (rb.velocity != Vector3.zero || transform.hasChanged)   // if moving
         {
             moving = true;
+            officerAnim.SetBool("isMoving", moving);
             transform.hasChanged = false;
         }
-        else
+        else    // if not moving
         {
             moving = false;
+            officerAnim.SetBool("isMoving", moving);
         }
-        officerAnim.SetBool("isMoving", moving);
     }
 }

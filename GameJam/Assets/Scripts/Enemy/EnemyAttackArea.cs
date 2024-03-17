@@ -9,11 +9,11 @@ public class EnemyAttackArea : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
-        {
+        // if (other.tag == "Player")
+        // {
             Debug.Log("Player hit");
             PlayerHealth Jax = other.GetComponent<PlayerHealth>();
             Jax.TakeDamage(damage);
-        }
+        //}
     }
 }
