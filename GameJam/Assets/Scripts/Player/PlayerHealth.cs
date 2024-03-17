@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -101,6 +102,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void PlayerDeath()
     {
+        SceneManager.LoadScene("LoseScreen");
         /*
         //Debug.Log("You have died");
 
