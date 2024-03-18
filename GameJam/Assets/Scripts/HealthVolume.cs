@@ -23,17 +23,19 @@ public class HealthVolume : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         CharacterController player = other.GetComponent<CharacterController>();
-        if (player != null)
+        if (player != null && other.gameObject.tag == "Player")
         {
             _playerHealth.AddHealth(_healthToAdd);
-
+            _collectParticle.Play();
         }
-        _collectParticle.Play();
         //_healthVolume.SetActive(false);
     }
 
     private void OnTriggerExit(Collider other)
     {
-        _healthVolume.SetActive(false);
+        if (other.gameObject.tag == "Player")
+        {
+            _healthVolume.SetActive(false);
+        }
     }
 }
