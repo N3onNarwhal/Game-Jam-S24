@@ -13,6 +13,8 @@ public class EnemyController : MonoBehaviour
     NavMeshAgent agent;
     Transform target;
 
+    public AudioSource enemyAttack;
+
     void Start()
     {
         target = PlayerManager.instance.player.transform;
@@ -50,6 +52,7 @@ public class EnemyController : MonoBehaviour
 
     private IEnumerator Attack()
     {
+        enemyAttack.Play(0);
         yield return new WaitForSeconds(1);
     }
 }

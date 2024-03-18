@@ -7,9 +7,10 @@ public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] int _maxHealth = 100;
     //[SerializeField] GameObject _deathPanel = null;
-    //[SerializeField] AudioSource _playerDeath = null;
-    [SerializeField] AudioSource _playerHurt = null;
-    [SerializeField] AudioSource _playerDrink = null;
+    [SerializeField] AudioSource _playerDeath;
+    [SerializeField] AudioSource _playerHurt;
+    [SerializeField] AudioSource _playerDrink;
+    [SerializeField] AudioSource _playerAttack;
     [SerializeField] int _maxStamina = 100;
 
     public int _currentStamina = 100;
@@ -44,6 +45,7 @@ public class PlayerHealth : MonoBehaviour
 
         if (_currentHealth == 0)
         {
+            _playerDeath.Play(0);
             PlayerDeath();
         }
 
@@ -58,9 +60,10 @@ public class PlayerHealth : MonoBehaviour
         _currentHealth += slurp;
 
         _healthBar.SetHealth(_currentHealth);
-
+        
         if (_playerDrink != null)
         {
+            _playerDrink.Play(0);
             AudioSource newSound = Instantiate(_playerDrink, transform.position, Quaternion.identity);
             Destroy(newSound.gameObject, newSound.clip.length);
         }
@@ -131,6 +134,7 @@ public class PlayerHealth : MonoBehaviour
         if (enemyAtt != null)
         {
             enemyAtt.TakeDamage(attack);
+            _playerAttack.Play(0);
         }
     }
 }

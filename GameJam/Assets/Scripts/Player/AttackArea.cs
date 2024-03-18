@@ -11,7 +11,7 @@ public class AttackArea : MonoBehaviour
     {
         if (other.tag == "Enemy")
         {
-            Debug.Log("Enemy hit");
+            //Debug.Log("Enemy hit");
             EnemyAttributes enemyAtt = other.GetComponent<EnemyAttributes>();
             Jax.DealDamage(enemyAtt.gameObject);
         }
