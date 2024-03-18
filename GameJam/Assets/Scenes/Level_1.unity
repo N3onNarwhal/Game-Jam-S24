@@ -2653,9 +2653,9 @@ MonoBehaviour:
   health: 100
   attack: 20
   Enemy: {fileID: 75280496}
-  enemyHit: {fileID: 0}
-  enemyDeath: {fileID: 0}
-  jaxHit: {fileID: 0}
+  enemyHit: {fileID: 1463529222}
+  enemyDeath: {fileID: 1756062417}
+  jaxHit: {fileID: 1008474027}
 --- !u!114 &75280500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2671,7 +2671,7 @@ MonoBehaviour:
   eAttackArea: {fileID: 1234857241}
   Officer: {fileID: 75280496}
   lookRadius: 15
-  enemyAttack: {fileID: 0}
+  enemyAttack: {fileID: 938766572}
 --- !u!195 &75280501
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -12740,9 +12740,9 @@ MonoBehaviour:
   health: 100
   attack: 20
   Enemy: {fileID: 306381963}
-  enemyHit: {fileID: 0}
-  enemyDeath: {fileID: 0}
-  jaxHit: {fileID: 0}
+  enemyHit: {fileID: 1463529222}
+  enemyDeath: {fileID: 1756062417}
+  jaxHit: {fileID: 1008474027}
 --- !u!114 &306381967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12758,7 +12758,7 @@ MonoBehaviour:
   eAttackArea: {fileID: 307460096}
   Officer: {fileID: 306381963}
   lookRadius: 15
-  enemyAttack: {fileID: 0}
+  enemyAttack: {fileID: 938766572}
 --- !u!195 &306381968
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -15459,9 +15459,9 @@ MonoBehaviour:
   health: 100
   attack: 20
   Enemy: {fileID: 369441407}
-  enemyHit: {fileID: 0}
-  enemyDeath: {fileID: 0}
-  jaxHit: {fileID: 0}
+  enemyHit: {fileID: 1463529222}
+  enemyDeath: {fileID: 1756062417}
+  jaxHit: {fileID: 1008474027}
 --- !u!114 &369441411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15477,7 +15477,7 @@ MonoBehaviour:
   eAttackArea: {fileID: 235021960}
   Officer: {fileID: 369441407}
   lookRadius: 15
-  enemyAttack: {fileID: 0}
+  enemyAttack: {fileID: 938766572}
 --- !u!195 &369441412
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -30649,9 +30649,9 @@ MonoBehaviour:
   health: 100
   attack: 20
   Enemy: {fileID: 786285190}
-  enemyHit: {fileID: 0}
-  enemyDeath: {fileID: 0}
-  jaxHit: {fileID: 0}
+  enemyHit: {fileID: 1463529222}
+  enemyDeath: {fileID: 1756062417}
+  jaxHit: {fileID: 1008474027}
 --- !u!114 &786285194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30667,7 +30667,7 @@ MonoBehaviour:
   eAttackArea: {fileID: 2135954128}
   Officer: {fileID: 786285190}
   lookRadius: 15
-  enemyAttack: {fileID: 0}
+  enemyAttack: {fileID: 938766572}
 --- !u!195 &786285195
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -40661,9 +40661,9 @@ MonoBehaviour:
   health: 100
   attack: 20
   Enemy: {fileID: 1091493999}
-  enemyHit: {fileID: 0}
-  enemyDeath: {fileID: 0}
-  jaxHit: {fileID: 0}
+  enemyHit: {fileID: 1463529222}
+  enemyDeath: {fileID: 1756062417}
+  jaxHit: {fileID: 1008474027}
 --- !u!114 &1091494003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40679,7 +40679,7 @@ MonoBehaviour:
   eAttackArea: {fileID: 63848540}
   Officer: {fileID: 1091493999}
   lookRadius: 15
-  enemyAttack: {fileID: 0}
+  enemyAttack: {fileID: 938766572}
 --- !u!195 &1091494004
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -44280,7 +44280,7 @@ MonoBehaviour:
   Enemy: {fileID: 1204018142}
   enemyHit: {fileID: 1463529222}
   enemyDeath: {fileID: 1756062417}
-  jaxHit: {fileID: 0}
+  jaxHit: {fileID: 1008474027}
 --- !u!114 &1204018146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45261,9 +45261,9 @@ MonoBehaviour:
   health: 100
   attack: 20
   Enemy: {fileID: 1252110696}
-  enemyHit: {fileID: 0}
-  enemyDeath: {fileID: 0}
-  jaxHit: {fileID: 0}
+  enemyHit: {fileID: 1463529222}
+  enemyDeath: {fileID: 1756062417}
+  jaxHit: {fileID: 1008474027}
 --- !u!114 &1252110700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45279,7 +45279,7 @@ MonoBehaviour:
   eAttackArea: {fileID: 294292747}
   Officer: {fileID: 1252110696}
   lookRadius: 15
-  enemyAttack: {fileID: 0}
+  enemyAttack: {fileID: 938766572}
 --- !u!195 &1252110701
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -46656,9 +46656,9 @@ MonoBehaviour:
   health: 100
   attack: 20
   Enemy: {fileID: 1292758530}
-  enemyHit: {fileID: 0}
-  enemyDeath: {fileID: 0}
-  jaxHit: {fileID: 0}
+  enemyHit: {fileID: 1463529222}
+  enemyDeath: {fileID: 1756062417}
+  jaxHit: {fileID: 1008474027}
 --- !u!114 &1292758534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46674,7 +46674,7 @@ MonoBehaviour:
   eAttackArea: {fileID: 395275504}
   Officer: {fileID: 1292758530}
   lookRadius: 15
-  enemyAttack: {fileID: 0}
+  enemyAttack: {fileID: 938766572}
 --- !u!195 &1292758535
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -52017,9 +52017,9 @@ MonoBehaviour:
   health: 100
   attack: 20
   Enemy: {fileID: 1463024895}
-  enemyHit: {fileID: 0}
-  enemyDeath: {fileID: 0}
-  jaxHit: {fileID: 0}
+  enemyHit: {fileID: 1463529222}
+  enemyDeath: {fileID: 1756062417}
+  jaxHit: {fileID: 1008474027}
 --- !u!114 &1463024899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52035,7 +52035,7 @@ MonoBehaviour:
   eAttackArea: {fileID: 2111306408}
   Officer: {fileID: 1463024895}
   lookRadius: 15
-  enemyAttack: {fileID: 0}
+  enemyAttack: {fileID: 938766572}
 --- !u!195 &1463024900
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -57277,9 +57277,9 @@ MonoBehaviour:
   health: 100
   attack: 20
   Enemy: {fileID: 1601787134}
-  enemyHit: {fileID: 0}
-  enemyDeath: {fileID: 0}
-  jaxHit: {fileID: 0}
+  enemyHit: {fileID: 1463529222}
+  enemyDeath: {fileID: 1756062417}
+  jaxHit: {fileID: 1008474027}
 --- !u!114 &1601787138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57295,7 +57295,7 @@ MonoBehaviour:
   eAttackArea: {fileID: 152187318}
   Officer: {fileID: 1601787134}
   lookRadius: 15
-  enemyAttack: {fileID: 0}
+  enemyAttack: {fileID: 938766572}
 --- !u!195 &1601787139
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -68723,7 +68723,7 @@ MonoBehaviour:
   Enemy: {fileID: 1904916206}
   enemyHit: {fileID: 1463529222}
   enemyDeath: {fileID: 1756062417}
-  jaxHit: {fileID: 0}
+  jaxHit: {fileID: 1008474027}
 --- !u!114 &1904916210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75731,7 +75731,7 @@ MonoBehaviour:
   Enemy: {fileID: 2116116366}
   enemyHit: {fileID: 1463529222}
   enemyDeath: {fileID: 1756062417}
-  jaxHit: {fileID: 0}
+  jaxHit: {fileID: 1008474027}
 --- !u!114 &2116116370
 MonoBehaviour:
   m_ObjectHideFlags: 0
