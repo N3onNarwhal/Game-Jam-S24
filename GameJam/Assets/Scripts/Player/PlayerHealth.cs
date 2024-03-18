@@ -43,9 +43,9 @@ public class PlayerHealth : MonoBehaviour
             TakeDmg(_damageToTake);
         }
 
-        if (_currentHealth == 0)
+        if (_currentHealth <= 0)
         {
-            _playerDeath.Play(0);
+
             PlayerDeath();
         }
 
@@ -61,9 +61,9 @@ public class PlayerHealth : MonoBehaviour
 
         _healthBar.SetHealth(_currentHealth);
         
+        _playerDrink.Play(0);
         if (_playerDrink != null)
         {
-            _playerDrink.Play(0);
             AudioSource newSound = Instantiate(_playerDrink, transform.position, Quaternion.identity);
             Destroy(newSound.gameObject, newSound.clip.length);
         }
@@ -105,6 +105,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void PlayerDeath()
     {
+        _playerDeath.Play(0);
         SceneManager.LoadScene("LoseScreen");
         /*
         //Debug.Log("You have died");
@@ -126,6 +127,7 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage(int amount)
     {
         TakeDmg(amount);
+        _playerHurt.Play(0);
     }
 
     public void DealDamage(GameObject Enemy)

@@ -9,8 +9,12 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] GameObject runAnim;
     [SerializeField] GameObject skateAnim;
 
-    Animator attack;
     [SerializeField] GameObject attackArea;
+
+    [SerializeField] AudioSource jaxAttack;
+
+    Animator attack;
+    
 
     bool animFinished = true;
     float NTime = 0.0f;

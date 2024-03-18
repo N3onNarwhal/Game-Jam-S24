@@ -2655,6 +2655,7 @@ MonoBehaviour:
   Enemy: {fileID: 75280496}
   enemyHit: {fileID: 0}
   enemyDeath: {fileID: 0}
+  jaxHit: {fileID: 0}
 --- !u!114 &75280500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12741,6 +12742,7 @@ MonoBehaviour:
   Enemy: {fileID: 306381963}
   enemyHit: {fileID: 0}
   enemyDeath: {fileID: 0}
+  jaxHit: {fileID: 0}
 --- !u!114 &306381967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13914,6 +13916,7 @@ MonoBehaviour:
   runAnim: {fileID: 737308117}
   skateAnim: {fileID: 1184908296}
   attackArea: {fileID: 268036133}
+  jaxAttack: {fileID: 992542330}
 --- !u!1 &341371238
 GameObject:
   m_ObjectHideFlags: 0
@@ -15458,6 +15461,7 @@ MonoBehaviour:
   Enemy: {fileID: 369441407}
   enemyHit: {fileID: 0}
   enemyDeath: {fileID: 0}
+  jaxHit: {fileID: 0}
 --- !u!114 &369441411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26414,9 +26418,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: e93138f26d229e1409a6e1f3bdb00f32, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -30647,6 +30651,7 @@ MonoBehaviour:
   Enemy: {fileID: 786285190}
   enemyHit: {fileID: 0}
   enemyDeath: {fileID: 0}
+  jaxHit: {fileID: 0}
 --- !u!114 &786285194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32470,6 +32475,7 @@ MonoBehaviour:
   Enemy: {fileID: 856619315}
   enemyHit: {fileID: 1463529222}
   enemyDeath: {fileID: 1756062417}
+  jaxHit: {fileID: 1008474027}
 --- !u!65 &856619319
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36009,7 +36015,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 33ac12ec97463ac4abb03a80661ada7a, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.2
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -37215,7 +37221,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 3c87e26e681b39e479ef3a9ab4836413, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.3
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -40657,6 +40663,7 @@ MonoBehaviour:
   Enemy: {fileID: 1091493999}
   enemyHit: {fileID: 0}
   enemyDeath: {fileID: 0}
+  jaxHit: {fileID: 0}
 --- !u!114 &1091494003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44273,6 +44280,7 @@ MonoBehaviour:
   Enemy: {fileID: 1204018142}
   enemyHit: {fileID: 1463529222}
   enemyDeath: {fileID: 1756062417}
+  jaxHit: {fileID: 0}
 --- !u!114 &1204018146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45255,6 +45263,7 @@ MonoBehaviour:
   Enemy: {fileID: 1252110696}
   enemyHit: {fileID: 0}
   enemyDeath: {fileID: 0}
+  jaxHit: {fileID: 0}
 --- !u!114 &1252110700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46649,6 +46658,7 @@ MonoBehaviour:
   Enemy: {fileID: 1292758530}
   enemyHit: {fileID: 0}
   enemyDeath: {fileID: 0}
+  jaxHit: {fileID: 0}
 --- !u!114 &1292758534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52009,6 +52019,7 @@ MonoBehaviour:
   Enemy: {fileID: 1463024895}
   enemyHit: {fileID: 0}
   enemyDeath: {fileID: 0}
+  jaxHit: {fileID: 0}
 --- !u!114 &1463024899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52108,7 +52119,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 28727fd064d96994184e32ae1fcd57b0, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.2
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -52717,7 +52728,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 747ce55b077bad64491b6a229763461c, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.3
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -57268,6 +57279,7 @@ MonoBehaviour:
   Enemy: {fileID: 1601787134}
   enemyHit: {fileID: 0}
   enemyDeath: {fileID: 0}
+  jaxHit: {fileID: 0}
 --- !u!114 &1601787138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62543,7 +62555,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6d7fb069ecc296842bd472fa9889d8e9, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.2
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -68711,6 +68723,7 @@ MonoBehaviour:
   Enemy: {fileID: 1904916206}
   enemyHit: {fileID: 1463529222}
   enemyDeath: {fileID: 1756062417}
+  jaxHit: {fileID: 0}
 --- !u!114 &1904916210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75718,6 +75731,7 @@ MonoBehaviour:
   Enemy: {fileID: 2116116366}
   enemyHit: {fileID: 1463529222}
   enemyDeath: {fileID: 1756062417}
+  jaxHit: {fileID: 0}
 --- !u!114 &2116116370
 MonoBehaviour:
   m_ObjectHideFlags: 0

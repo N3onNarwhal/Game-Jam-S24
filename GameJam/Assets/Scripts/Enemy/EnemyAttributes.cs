@@ -10,15 +10,16 @@ public class EnemyAttributes : MonoBehaviour
 
     [SerializeField] AudioSource enemyHit;
     [SerializeField] AudioSource enemyDeath;
+    [SerializeField] AudioSource jaxHit;
 
     public void TakeDamage(int amount)
     {
         health -= amount;
+
         if (health == 0)
         {
             enemyDeath.Play(0);
             Destroy(gameObject);
-            //Debug.Log("Enemy defeated");
         }
         else
         {
@@ -31,6 +32,7 @@ public class EnemyAttributes : MonoBehaviour
         var jaxHealth = Jax.GetComponent<PlayerHealth>();
         if (jaxHealth != null)
         {
+            jaxHit.Play(0);
             jaxHealth.TakeDamage(attack);
         }
     }

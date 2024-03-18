@@ -18,7 +18,6 @@ public class EnemyController : MonoBehaviour
     void Start()
     {
         target = PlayerManager.instance.player.transform;
-        //eAttackArea.SetActive(false);
     }
 
     void Awake()
