@@ -58,6 +58,10 @@ public class PlayerHealth : MonoBehaviour
     public void AddHealth(int slurp)
     {
         _currentHealth += slurp;
+        if (_currentHealth > 100)
+        {
+            _currentHealth = 100;
+        }
 
         _healthBar.SetHealth(_currentHealth);
         
